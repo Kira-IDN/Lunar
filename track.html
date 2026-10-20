@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your LUNAR celestial dining order or reservation in near-real-time using your secure reference code.">
+  <title>Order &amp; Booking Progress &middot; LUNAR</title>
+
+  <!-- Google Fonts: Cormorant Garamond, DM Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/track.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Tracking Notice">
+    <div class="announcement-bar-content">
+      <span class="lunar-glyph" aria-hidden="true">&#x25D0;</span>
+      <span>[NEAR-REAL-TIME ACTIVE] Adaptive status polling enabled &middot; Backoff on browser blur</span>
+    </div>
+    <div class="announcement-bar-links">
+      <span class="type-coordinates">POLL FREQUENCY: 8S / 30S</span>
+      <a href="menu.html" class="type-meta">Browse Menu</a>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LUNAR Homepage">
+        <span class="brand-title">LUNAR</span>
+        <span class="brand-tagline">Celestial Dining</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="reservation.html" class="nav-link">Reservations</a>
+        <a href="track.html" class="nav-link active" aria-current="page">Order Lookup</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="reservation.html" class="btn btn-brass btn-sm">Reserve Table</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="section">
+      <div class="container">
+        
+        <!-- Tracking Lookup Header Box -->
+        <div class="track-header-box">
+          <span class="type-kicker">[SERVICE AUDIT &middot; NEAR-REAL-TIME STATUS]</span>
+          <h1 class="type-display" style="margin-top: var(--space-xs); margin-bottom: var(--space-xs);">
+            Order &amp; Booking Lookup.
+          </h1>
+          <p class="type-lead">
+            Input your CSPRNG unpredictable reference token (e.g. <code>LNR-8X9K2M7P</code>) to inspect kitchen preparation or reservation confirmation.
+          </p>
+
+          <form action="#" method="get" class="track-lookup-form" aria-label="Tracking lookup form">
+            <input 
+              type="text" 
+              class="track-lookup-input" 
+              name="ref" 
+              value="LNR-8X9K2M7P" 
+              placeholder="e.g. LNR-8X9K2M7P" 
+              aria-label="Order or Reservation Reference Code"
+              required
+            >
+            <button type="submit" class="btn btn-ink">Query Status</button>
+          </form>
+        </div>
+
+        <!-- Decoupled Status Banner (Independent Operational vs Financial States) -->
+        <div class="status-banner" aria-label="Current Status Overview">
+          <div class="status-metric">
+            <span class="type-meta">OPERATIONAL FULFILLMENT STAGE</span>
+            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-top: 4px;">
+              <span class="badge badge-in_kitchen" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;">
+                IN_KITCHEN
+              </span>
+              <span class="type-small">Active Culinary Preparation</span>
+            </div>
+            <span class="type-micro" style="color: var(--color-ink-muted); margin-top: 2px;">
+              Stage 3 of 5 in Dine-In Fulfillment Pipeline
+            </span>
+          </div>
+
+          <div class="status-metric">
+            <span class="type-meta">FINANCIAL SETTLEMENT STATE (PAYMENTS LEDGER)</span>
+            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-top: 4px;">
+              <span class="badge badge-served" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;">
+                PAID (SETTLED)
+              </span>
+              <span class="type-small">Simulated Sandbox Payment Confirmed</span>
+            </div>
+            <span class="type-micro" style="color: var(--color-ink-muted); margin-top: 2px;">
+              Tx Ref: <code>TX-MOCK-20261019-9021</code> &middot; Idempotency Validated
+            </span>
+          </div>
+        </div>
+
+        <!-- Active Pipeline Stepper (Dine-In Fulfillment Flow) -->
+        <div class="pipeline-card">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-md);">
+            <div>
+              <span class="type-kicker">DINE-IN SERVICE TIMELINE</span>
+              <h2 class="type-h3" style="margin-top: 2px;">Order Progression &middot; Table #02</h2>
+            </div>
+            <span class="badge badge-moonstone">ESTIMATED PLATING: 10 MIN</span>
+          </div>
+
+          <!-- Stepper: placed -> confirmed -> in_kitchen -> ready_to_serve -> served -> completed -->
+          <div class="status-stepper" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="6">
+            
+            <div class="step-node completed">
+              <span class="step-dot" aria-hidden="true">&#x2713;</span>
+              <span class="step-label">Placed</span>
+            </div>
+
+            <div class="step-node completed">
+              <span class="step-dot" aria-hidden="true">&#x2713;</span>
+              <span class="step-label">Confirmed</span>
+            </div>
+
+            <div class="step-node active">
+              <span class="step-dot" aria-hidden="true">3</span>
+              <span class="step-label">In Kitchen</span>
+            </div>
+
+            <div class="step-node">
+              <span class="step-dot" aria-hidden="true">4</span>
+              <span class="step-label">Ready to Serve</span>
+            </div>
+
+            <div class="step-node">
+              <span class="step-dot" aria-hidden="true">5</span>
+              <span class="step-label">Served</span>
+            </div>
+
+            <div class="step-node">
+              <span class="step-dot" aria-hidden="true">6</span>
+              <span class="step-label">Completed</span>
+            </div>
+
+          </div>
+
+          <div class="border-rule" style="margin: var(--space-xl) 0 var(--space-lg) 0;"></div>
+
+          <!-- Live Log Item -->
+          <div style="display: flex; gap: var(--space-md); align-items: flex-start;">
+            <span class="lunar-glyph" style="font-size: 1.5rem;" aria-hidden="true">&#x25D1;</span>
+            <div>
+              <strong class="type-h4" style="display: block;">The hearth team has begun firing your courses.</strong>
+              <p class="type-small" style="margin-top: 2px;">
+                Diver scallops are seared at 19:18. Duck breast is resting on the carving board. Floor staff will deliver courses sequentially to Table #02.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Receipt & Manifest Details -->
+        <div class="grid-2col">
+          
+          <div class="track-header-box" style="margin-bottom: 0;">
+            <span class="type-kicker">ITEMIZED TICKET MANIFEST</span>
+            <h3 class="type-h3" style="margin-top: 2px; margin-bottom: var(--space-md);">
+              Ordered Selections
+            </h3>
+
+            <div class="tasting-item">
+              <div class="tasting-title-wrap">
+                <span class="tasting-title">1 &times; [Sample Dish 01] Seared Diver Scallops</span>
+                <span class="tasting-desc">Extra sea kelp infusion; gluten-free plate</span>
+              </div>
+              <span class="type-mono" style="font-weight: 600;">$38.00</span>
+            </div>
+
+            <div class="tasting-item">
+              <div class="tasting-title-wrap">
+                <span class="tasting-title">1 &times; [Sample Dish 04] Aged Heritage Duck</span>
+                <span class="tasting-desc">Medium-rare hearth roast</span>
+              </div>
+              <span class="type-mono" style="font-weight: 600;">$54.00</span>
+            </div>
+
+            <div class="border-rule" style="margin: var(--space-md) 0;"></div>
+
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Total Settled (Taxes &amp; Fees Disabled: 0.00%)</span>
+              <span class="type-mono" style="color: var(--color-brass);">$92.00</span>
+            </div>
+          </div>
+
+          <div class="track-header-box" style="margin-bottom: 0;">
+            <span class="type-kicker">RESERVATION / ORDER AUDIT</span>
+            <h3 class="type-h3" style="margin-top: 2px; margin-bottom: var(--space-md);">
+              Metadata &amp; Verification
+            </h3>
+
+            <div class="summary-row">
+              <span class="summary-label">Order Reference Token</span>
+              <span class="type-mono" style="font-weight: 600;">LNR-8X9K2M7P</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Guest</span>
+              <span class="summary-val">Eleanor Vance</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Fulfillment Mode</span>
+              <span class="summary-val">Dine-In (Table #02 &middot; Celestial Nave)</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Settlement Method</span>
+              <span class="summary-val">Mock Card (Sandbox Authorization)</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Timestamp</span>
+              <span class="summary-val">2026-10-19 19:14:02 UTC</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <span class="brand-title">LUNAR</span>
+          <span class="brand-tagline">Celestial Dining</span>
+          <p>An original dining concept uniting nocturnal gastronomy, ancestral preservation, and editorial design restraint.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu &amp; Ordering</a></li>
+            <li><a href="reservation.html" class="footer-link">Reservations</a></li>
+            <li><a href="story.html" class="footer-link">Philosophy &amp; Story</a></li>
+            <li><a href="track.html" class="footer-link">Track Order / Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Service Window</h4>
+          <ul class="footer-links" style="color: var(--color-moonstone); font-size: var(--font-size-small);">
+            <li><strong>Dinner Seating:</strong> 17:30 &ndash; 22:30</li>
+            <li><strong>Turnaround Cadence:</strong> 90 Min</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Course Milestones</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">Menu (Vanilla JS)</a></li>
+            <li><a href="menu.php" class="footer-link">Menu (Procedural PHP)</a></li>
+            <li><a href="menu-oop.php" class="footer-link">Menu (OOP PHP)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LUNAR &middot; Academic Web Programming Project (Weeks 1&ndash;6).</span>
+        <span>HTML5 &amp; CSS3 Foundation</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts: Week 3 Global Cart State & Drawer -->
+  <script type="module" src="assets/js/main.js"></script>
+  <!-- Track Page Controller: Near-real-time polling & status hydration -->
+  <script type="module" src="assets/js/pages/track.js"></script>
+</body>
+</html>

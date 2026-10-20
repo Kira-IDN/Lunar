@@ -1,0 +1,11 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Server and temporary logs
+*.log
+error_log
+
+# Scratch and test runner artifacts
+scratch/

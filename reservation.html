@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table at LUNAR. Choose your dining date, timeslot, party size, and table without risk of double-booking.">
+  <title>Table Reservations &middot; LUNAR</title>
+
+  <!-- Google Fonts: Cormorant Garamond, DM Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/reservation.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Reservation Notice">
+    <div class="announcement-bar-content">
+      <span class="lunar-glyph" aria-hidden="true">&#x25D1;</span>
+      <span>[RESERVATION PROTOTYPE] Table holds expire after 15 min without submission &middot; 90-min seating</span>
+    </div>
+    <div class="announcement-bar-links">
+      <span class="type-coordinates">SLOT CADENCE: 90 MIN</span>
+      <a href="track.html" class="type-meta">Check Existing Booking</a>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LUNAR Homepage">
+        <span class="brand-title">LUNAR</span>
+        <span class="brand-tagline">Celestial Dining</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="reservation.html" class="nav-link active" aria-current="page">Reservations</a>
+        <a href="track.html" class="nav-link">Order Lookup</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="checkout.html" class="btn btn-outline btn-sm" aria-label="View Cart">
+          <span>Cart</span>
+          <span class="badge badge-brass" aria-label="0 items">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="section">
+      <div class="container">
+        
+        <header class="section-header" style="margin-bottom: var(--space-xl);">
+          <span class="type-kicker">[SERVICE BOOKING &middot; AUTUMN CYCLE]</span>
+          <h1 class="type-display" style="margin-top: var(--space-xs); margin-bottom: var(--space-xs);">
+            Reserve a Table.
+          </h1>
+          <p class="type-lead" style="max-width: 680px;">
+            Select your preferred evening, seating time, and dining sanctum. Live interval validation strictly prevents overlapping bookings for the same table.
+          </p>
+        </header>
+
+        <form action="#" method="post" class="reservation-grid" aria-label="Table reservation form">
+          
+          <!-- Left Column: Booking Selectors & Guest Contact -->
+          <div>
+            
+            <!-- Step 1: Date, Time & Party -->
+            <fieldset style="border: none; margin-bottom: var(--space-2xl);">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                1. Date, Time &amp; Party Size
+              </legend>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label for="reservation-date" class="form-label">Reservation Date</label>
+                  <input type="date" id="reservation-date" name="reservation_date" class="form-input" value="2026-10-24" required>
+                  <span class="form-hint">Reservations open 30 days in advance.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="party-size" class="form-label">Party Size</label>
+                  <select id="party-size" name="party_size" class="form-select" required>
+                    <option value="1">1 Guest (Solo Tasting)</option>
+                    <option value="2" selected>2 Guests (Intimate Table)</option>
+                    <option value="4">4 Guests (Sanctuary Booth)</option>
+                    <option value="6">6 Guests (Hearth Alcove)</option>
+                    <option value="8">8 Guests (Observatory Table)</option>
+                  </select>
+                  <span class="form-hint">For parties &gt; 8, please contact concierge.</span>
+                </div>
+              </div>
+
+              <!-- Time Slot Grid -->
+              <div class="form-group" style="margin-top: var(--space-md);">
+                <label class="form-label">Select Seating Window</label>
+                <div class="slot-grid" role="radiogroup" aria-label="Available Seating Times">
+                  <button type="button" class="slot-btn" role="radio" aria-checked="false">17:30</button>
+                  <button type="button" class="slot-btn" role="radio" aria-checked="false">18:00</button>
+                  <button type="button" class="slot-btn active" role="radio" aria-checked="true">19:00</button>
+                  <button type="button" class="slot-btn" role="radio" aria-checked="false">19:30</button>
+                  <button type="button" class="slot-btn unavailable" role="radio" aria-checked="false" disabled title="Booked slot">20:30</button>
+                  <button type="button" class="slot-btn" role="radio" aria-checked="false">21:00</button>
+                </div>
+                <span class="form-hint" style="margin-top: var(--space-xs);">Crossed out slots are fully occupied for the selected party size.</span>
+              </div>
+            </fieldset>
+
+            <!-- Step 2: Available Table Allocation -->
+            <fieldset style="border: none; margin-bottom: var(--space-2xl);">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                2. Select Table Sanctum
+              </legend>
+
+              <div class="table-selector-grid" role="radiogroup" aria-label="Table Selection">
+                
+                <div class="table-card-option active" role="radio" aria-checked="true" tabindex="0">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <span class="type-meta" style="color: var(--color-brass);">TABLE #02</span>
+                    <span class="badge badge-brass">RECOMMENDED</span>
+                  </div>
+                  <strong class="type-h4">Celestial Nave Booth</strong>
+                  <span class="type-small">Zone: Main Dining Sanctuary &middot; Cap: 2&ndash;4 Guests</span>
+                </div>
+
+                <div class="table-card-option" role="radio" aria-checked="false" tabindex="0">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <span class="type-meta">TABLE #05</span>
+                    <span class="badge badge-moonstone">AVAILABLE</span>
+                  </div>
+                  <strong class="type-h4">Observatory Counter</strong>
+                  <span class="type-small">Zone: Open Hearth View &middot; Cap: 2 Guests</span>
+                </div>
+
+                <div class="table-card-option" role="radio" aria-checked="false" tabindex="0">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <span class="type-meta">TABLE #08</span>
+                    <span class="badge badge-moonstone">AVAILABLE</span>
+                  </div>
+                  <strong class="type-h4">Nocturne Alcove</strong>
+                  <span class="type-small">Zone: Private Library Corner &middot; Cap: 2 Guests</span>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <!-- Step 3: Guest Contact Information -->
+            <fieldset style="border: none;">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                3. Guest Information
+              </legend>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label for="guest-name" class="form-label">Full Name</label>
+                  <input type="text" id="guest-name" name="guest_name" class="form-input" placeholder="e.g. Eleanor Vance" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="guest-phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="guest-phone" name="guest_phone" class="form-input" placeholder="+1 (555) 019-2834" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guest-email" class="form-label">Email Address</label>
+                <input type="email" id="guest-email" name="guest_email" class="form-input" placeholder="eleanor@example.com" required>
+                <span class="form-hint">Confirmation token will be transmitted to this email.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="dietary-notes" class="form-label">Dietary Preferences &amp; Special Occasions</label>
+                <textarea id="dietary-notes" name="dietary_notes" class="form-textarea" placeholder="Please mention any severe allergies (e.g. celiac, shellfish, tree nuts) or celebration notes."></textarea>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <!-- Right Column: Sticky Booking Summary -->
+          <aside aria-label="Reservation Summary">
+            <div class="booking-summary-card">
+              <span class="type-kicker">BOOKING SUMMARY</span>
+              <h2 class="type-h3" style="margin-top: var(--space-2xs); margin-bottom: var(--space-lg);">
+                Your Seating Manifest
+              </h2>
+
+              <div class="summary-row">
+                <span class="summary-label">Date</span>
+                <span class="summary-val">Saturday, Oct 24, 2026</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="summary-label">Time Slot</span>
+                <span class="summary-val">19:00 &ndash; 20:30 (90 Min)</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="summary-label">Party</span>
+                <span class="summary-val">2 Guests</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="summary-label">Table Allocated</span>
+                <span class="summary-val">Table #02 (Celestial Nave)</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="summary-label">Initial Status</span>
+                <span class="badge badge-placed">PENDING CONFIRMATION</span>
+              </div>
+
+              <div style="margin-top: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-sm);">
+                <button type="submit" class="btn btn-brass btn-lg" style="width: 100%;">
+                  Request Reservation
+                </button>
+                <span class="type-micro" style="color: var(--color-ink-muted); text-align: center;">
+                  Simulated 15-minute table hold. Concurrency locks persist server-side in Week 5.
+                </span>
+              </div>
+
+              <div class="border-rule" style="margin: var(--space-lg) 0;"></div>
+
+              <div style="font-size: var(--font-size-micro); color: var(--color-ink-muted); line-height: 1.5;">
+                <strong>Policy Notice:</strong> Free cancellation up to 2 hours prior to seating. Standard dining window is 90 minutes. Actual operational policies subject to client approval.
+              </div>
+            </div>
+          </aside>
+
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <span class="brand-title">LUNAR</span>
+          <span class="brand-tagline">Celestial Dining</span>
+          <p>An original dining concept uniting nocturnal gastronomy, ancestral preservation, and editorial design restraint.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu &amp; Ordering</a></li>
+            <li><a href="reservation.html" class="footer-link">Reservations</a></li>
+            <li><a href="story.html" class="footer-link">Philosophy &amp; Story</a></li>
+            <li><a href="track.html" class="footer-link">Track Order / Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Service Window</h4>
+          <ul class="footer-links" style="color: var(--color-moonstone); font-size: var(--font-size-small);">
+            <li><strong>Dinner Seating:</strong> 17:30 &ndash; 22:30</li>
+            <li><strong>Turnaround Cadence:</strong> 90 Min</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Course Milestones</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">Menu (Vanilla JS)</a></li>
+            <li><a href="menu.php" class="footer-link">Menu (Procedural PHP)</a></li>
+            <li><a href="menu-oop.php" class="footer-link">Menu (OOP PHP)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LUNAR &middot; Academic Web Programming Project (Weeks 1&ndash;6).</span>
+        <span>HTML5 &amp; CSS3 Foundation</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts: Week 3 Reservation Validation & Table Slot Selector -->
+  <script type="module" src="assets/js/pages/reservation.js"></script>
+</body>
+</html>

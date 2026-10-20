@@ -1,0 +1,128 @@
+/* ==========================================================================
+   LUNAR DESIGN SYSTEM — VARIABLES & TOKENS
+   Brand: LUNAR — Celestial Dining Experience
+   Aesthetic: Minimalist, Editorial, Distinctive, Functional
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     Core Color Palette
+     -------------------------------------------------------------------------- */
+  --color-ink: #171B24;               /* Deep void ink — primary typography & dark accents */
+  --color-ink-subtle: #242938;        /* Elevated dark surfaces & dark secondary text */
+  --color-ink-muted: #5A6072;         /* Tertiary text, captions, metadata */
+  --color-ink-faint: rgba(23, 27, 36, 0.08); /* Delicate borders & dividers */
+  --color-ink-line: rgba(23, 27, 36, 0.14);  /* Standard structural rule lines */
+
+  --color-paper: #F3F0E8;             /* Warm parchment paper — page background */
+  --color-paper-card: #FFFFFF;        /* Crisp elevated container background */
+  --color-paper-muted: #EAE6DC;       /* Recessed containers & table header fills */
+  --color-paper-deep: #DCD7CA;        /* Darker paper for micro-borders */
+
+  --color-moonstone: #A6AA91;         /* Celestial sage/slate — secondary accents & badges */
+  --color-moonstone-light: #E7E9E1;   /* Soft sage tint for badge backgrounds */
+  --color-moonstone-border: #CBD0B9;  /* Crisp border for lunar elements */
+
+  --color-brass: #B88B59;             /* Warm lunar gold — primary CTA, active states */
+  --color-brass-hover: #9E7444;       /* Interactive hover state */
+  --color-brass-faint: rgba(184, 139, 89, 0.12); /* Subtle brass fill */
+  --color-brass-border: rgba(184, 139, 89, 0.35); /* Elegant brass borders */
+
+  /* --------------------------------------------------------------------------
+     Semantic Feedback Tokens
+     -------------------------------------------------------------------------- */
+  --color-success: #3E6B5C;           /* Muted juniper green */
+  --color-success-bg: #EDF3F0;
+  --color-warning: #B87333;           /* Muted copper amber */
+  --color-warning-bg: #FBF4ED;
+  --color-danger: #8B3A3A;            /* Deep brick crimson */
+  --color-danger-bg: #F9EEEE;
+  --color-info: #4A6572;              /* Deep slate */
+  --color-info-bg: #EEF3F5;
+
+  /* --------------------------------------------------------------------------
+     Typography Tokens
+     -------------------------------------------------------------------------- */
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Space Grotesk", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Type Scale (Safe for 320px mobile through 1440px ultrawide) */
+  --font-size-display: clamp(1.75rem, 4vw + 0.5rem, 4.25rem);  /* 28px - 68px */
+  --font-size-h1: clamp(1.5rem, 3vw + 0.5rem, 3.0rem);         /* 24px - 48px */
+  --font-size-h2: clamp(1.25rem, 2vw + 0.4rem, 2.25rem);       /* 20px - 36px */
+  --font-size-h3: clamp(1.15rem, 1.4vw + 0.4rem, 1.65rem);     /* 18px - 26px */
+  --font-size-h4: clamp(1.0rem, 1vw + 0.4rem, 1.3rem);         /* 16px - 21px */
+  --font-size-lead: clamp(0.95rem, 0.5vw + 0.8rem, 1.15rem);   /* 15px - 18px */
+  --font-size-body: 1rem;                                     /* 16px */
+  --font-size-small: 0.875rem;                                /* 14px */
+  --font-size-micro: 0.75rem;                                 /* 12px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.6;
+  --line-height-relaxed: 1.75;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-ultrawide: 0.14em;
+
+  /* --------------------------------------------------------------------------
+     Spacing Scale
+     -------------------------------------------------------------------------- */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6.5rem;   /* 104px */
+
+  /* --------------------------------------------------------------------------
+     Layout & Container Limits
+     -------------------------------------------------------------------------- */
+  --container-max-width: 1280px;
+  --container-narrow-width: 960px;
+  --container-editorial-width: 760px;
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+
+  /* --------------------------------------------------------------------------
+     Borders, Radii & Shadows
+     -------------------------------------------------------------------------- */
+  --border-width: 1px;
+  --border-line: var(--border-width) solid var(--color-ink-line);
+  --border-faint: var(--border-width) solid var(--color-ink-faint);
+  --border-brass: var(--border-width) solid var(--color-brass-border);
+  --border-moonstone: var(--border-width) solid var(--color-moonstone-border);
+
+  /* Minimalist architectural corners (restrained, sharp, editorial) */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 9999px;
+
+  /* Restrained, non-diffuse elevation (architectural paper layers) */
+  --shadow-subtle: 0 1px 3px rgba(23, 27, 36, 0.04), 0 4px 12px rgba(23, 27, 36, 0.03);
+  --shadow-elevated: 0 4px 20px rgba(23, 27, 36, 0.06), 0 1px 4px rgba(23, 27, 36, 0.04);
+  --shadow-overlay: 0 12px 36px rgba(23, 27, 36, 0.12);
+
+  /* --------------------------------------------------------------------------
+     Transitions (Subtle, purposeful, non-distracting)
+     -------------------------------------------------------------------------- */
+  --transition-fast: 150ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-normal: 240ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-slow: 360ms cubic-bezier(0.2, 0, 0, 1);
+
+  /* Focus Indicator for Accessibility */
+  --focus-ring: 2px solid var(--color-brass);
+  --focus-offset: 3px;
+}

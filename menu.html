@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUNAR Culinary Catalog. Explore seasonal starters, mains, desserts, and nocturnal elixirs available for dine-in and takeaway.">
+  <title>The Seasonal Menu &middot; LUNAR</title>
+
+  <!-- Google Fonts: Cormorant Garamond, DM Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/menu.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Notice">
+    <div class="announcement-bar-content">
+      <span class="lunar-glyph" aria-hidden="true">◐</span>
+      <span>[SAMPLE CATALOG] All culinary items &amp; prices are placeholders awaiting official client delivery.</span>
+    </div>
+    <div class="announcement-bar-links">
+      <span class="type-coordinates">AUTUMN EQUINOX &middot; CYCLE VI</span>
+      <a href="track.html" class="type-meta">Track Order</a>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LUNAR Homepage">
+        <span class="brand-title">LUNAR</span>
+        <span class="brand-tagline">Celestial Dining</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active" aria-current="page">Menu</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="reservation.html" class="nav-link">Reservations</a>
+        <a href="track.html" class="nav-link">Order Lookup</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="checkout.html" class="btn btn-outline btn-sm" aria-label="View Cart">
+          <span>Cart</span>
+          <span class="badge badge-brass" aria-label="0 items">0</span>
+        </a>
+        <a href="reservation.html" class="btn btn-brass btn-sm">Reserve Table</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Menu Masthead -->
+    <section class="menu-hero" aria-labelledby="menu-catalog-title">
+      <div class="container">
+        <span class="type-kicker">[CURRENT VOLUME &middot; AUTUMN EQUINOX]</span>
+        <h1 id="menu-catalog-title" class="type-display" style="margin-top: var(--space-xs); margin-bottom: var(--space-sm);">
+          The Celestial Culinary Catalog.
+        </h1>
+        <p class="type-lead" style="max-width: 720px;">
+          An editorial tasting progression available for dine-in service and curated takeaway packaging. Each dish is prepared with ingredients harvested in harmony with seasonal rhythms.
+        </p>
+
+        <!-- Menu Controls: Categories, Search, and Fulfillment Mode -->
+        <div class="menu-controls">
+          
+          <!-- Category Filter Bar (Hydrated dynamically by assets/js/pages/menu.js) -->
+          <nav class="category-filter-bar" aria-label="Menu Category Filter">
+            <div class="skeleton-pill" aria-hidden="true"></div>
+            <div class="skeleton-pill" aria-hidden="true"></div>
+            <div class="skeleton-pill" aria-hidden="true"></div>
+            <div class="skeleton-pill" aria-hidden="true"></div>
+            <div class="skeleton-pill" aria-hidden="true"></div>
+          </nav>
+
+          <!-- Search & Fulfillment Mode -->
+          <div class="menu-toolbar">
+            <div class="search-box-wrap">
+              <span class="search-icon" aria-hidden="true">&#x1F50D;</span>
+              <input 
+                type="search" 
+                class="search-input" 
+                placeholder="Search ingredients, allergens, or dishes..." 
+                aria-label="Search dishes"
+              >
+            </div>
+
+            <div class="mode-toggle" role="group" aria-label="Dining Mode Selection">
+              <button type="button" class="mode-btn active" aria-pressed="true">Dine-In Table</button>
+              <button type="button" class="mode-btn" aria-pressed="false">Curated Takeaway</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Offerings Body -->
+    <div class="section">
+      <div class="container" id="menu-catalog-container" aria-busy="true">
+
+        <noscript>
+          <div class="async-error-state" role="alert" style="margin-bottom: var(--space-xl);">
+            <span class="error-glyph" aria-hidden="true">&#x25D1;</span>
+            <h2 class="error-title">JavaScript Required for Interactive Catalog</h2>
+            <p class="error-message">
+              The seasonal catalog uses asynchronous data loading to provide real-time filtering, live search, and dynamic ordering. To view our complete 20-item celestial menu without JavaScript, explore our server-rendered versions:
+            </p>
+            <div style="display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-md);">
+              <a href="menu.php" class="btn btn-brass">View Procedural Menu (menu.php) &rarr;</a>
+              <a href="menu-oop.php" class="btn btn-outline">View OOP Menu (menu-oop.php) &rarr;</a>
+            </div>
+          </div>
+        </noscript>
+
+        <!-- Initial Accessible Loading Skeleton (Hydrated by assets/js/pages/menu.js) -->
+        <div class="skeleton-grid" role="status" aria-live="polite" aria-label="Loading culinary catalog">
+          <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+            Loading celestial menu offerings...
+          </span>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line skeleton-line-title"></div>
+              <div class="skeleton-line skeleton-line-desc"></div>
+              <div class="skeleton-line skeleton-line-short"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Policy Clarification Callout -->
+    <section class="section section-bordered section-faint">
+      <div class="container container-editorial text-center" style="text-align: center;">
+        <span class="type-kicker">[GOVERNANCE &amp; ACCURACY NOTICE]</span>
+        <h3 class="type-h3" style="margin-top: var(--space-xs); margin-bottom: var(--space-sm);">
+          Sample Culinary Manifest &amp; Dynamic Pricing Guard
+        </h3>
+        <p class="type-body" style="color: var(--color-ink-muted);">
+          All offerings and pricing are structural mock placeholders developed under the Web Programming Curriculum. In accordance with architectural security rules, all prices are recalculated authoritatively on the server; taxes and service charges remain disabled (0.00%) pending client policy delivery.
+        </p>
+      </div>
+    </section>
+
+  <!-- Site Footer (Colophon) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col-brand">
+          <span class="brand-title">LUNAR</span>
+          <span class="brand-tagline">Celestial Dining</span>
+          <p>
+            An original dining concept uniting nocturnal gastronomy, ancestral preservation, and editorial design restraint.
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <span class="type-coordinates">LAT 40&deg; 42&prime; 46&Prime; N &middot; LONG 74&deg; 00&prime; 21&Prime; W</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Architecture</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu &amp; Ordering</a></li>
+            <li><a href="reservation.html" class="footer-link">Reservations</a></li>
+            <li><a href="story.html" class="footer-link">Philosophy &amp; Story</a></li>
+            <li><a href="track.html" class="footer-link">Track Order / Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Hours</h4>
+          <ul class="footer-links" style="color: var(--color-moonstone); font-size: var(--font-size-small);">
+            <li><strong>Tuesday &ndash; Thursday:</strong> 17:30 &ndash; 22:30</li>
+            <li><strong>Friday &ndash; Saturday:</strong> 17:00 &ndash; 23:30</li>
+            <li><strong>Sunday &ndash; Monday:</strong> Closed for Foraging</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Course Milestones</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">Menu (Vanilla JS)</a></li>
+            <li><a href="menu.php" class="footer-link">Menu (Procedural PHP)</a></li>
+            <li><a href="menu-oop.php" class="footer-link">Menu (OOP PHP)</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 LUNAR &middot; Academic Web Programming Project (Weeks 1&ndash;6).</span>
+        <span>Designed with HTML5, CSS3, and Editorial Restraint.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts: Week 3 Dynamic Catalog & Cart State -->
+  <script type="module" src="assets/js/pages/menu.js"></script>
+</body>
+</html>

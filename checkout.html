@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review order checkout and simulated payment settlement for LUNAR celestial dining.">
+  <title>Order Checkout &middot; LUNAR</title>
+
+  <!-- Google Fonts: Cormorant Garamond, DM Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/checkout.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Checkout Notice">
+    <div class="announcement-bar-content">
+      <span class="lunar-glyph" aria-hidden="true">&#x25D1;</span>
+      <span>[MVP PROTOTYPE] Simulated payment settlement &middot; Authoritative server-side price recalculation</span>
+    </div>
+    <div class="announcement-bar-links">
+      <span class="type-coordinates">IDEMPOTENT SETTLEMENT READY</span>
+      <a href="track.html" class="type-meta">Track Existing Order</a>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LUNAR Homepage">
+        <span class="brand-title">LUNAR</span>
+        <span class="brand-tagline">Celestial Dining</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="reservation.html" class="nav-link">Reservations</a>
+        <a href="track.html" class="nav-link">Order Lookup</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="checkout.html" class="btn btn-brass btn-sm" aria-label="Cart Checkout">
+          <span>Checkout</span>
+          <span class="badge badge-brass" style="background: rgba(0,0,0,0.15); color: #171B24;">02 Items</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="section">
+      <div class="container">
+        
+        <header class="section-header" style="margin-bottom: var(--space-xl);">
+          <span class="type-kicker">[SETTLEMENT &middot; STEP 02 OF 02]</span>
+          <h1 class="type-display" style="margin-top: var(--space-xs); margin-bottom: var(--space-xs);">
+            Order Review &amp; Checkout.
+          </h1>
+          <p class="type-lead" style="max-width: 680px;">
+            Verify your itemized selection, select fulfillment parameters, and complete simulated payment settlement.
+          </p>
+        </header>
+
+        <form action="#" method="post" class="checkout-grid" aria-label="Order Checkout Form">
+          
+          <!-- Left Column: Item Review, Fulfillment Mode, Guest Info, Mock Payment -->
+          <div>
+            
+            <!-- Section 1: Itemized Order Review -->
+            <fieldset style="border: none; margin-bottom: var(--space-2xl);">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                1. Itemized Selection
+              </legend>
+
+              <table class="order-review-table" aria-label="Current Cart Items">
+                <thead>
+                  <tr>
+                    <th scope="col">Dish Manifest</th>
+                    <th scope="col" style="text-align: center;">Qty</th>
+                    <th scope="col" style="text-align: right;">Unit Price</th>
+                    <th scope="col" style="text-align: right;">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="order-item-desc">
+                        <strong class="order-item-title">[Sample Dish 01] Seared Diver Scallops</strong>
+                        <span class="type-small">Notes: Extra sea kelp infusion; gluten-free plate</span>
+                      </div>
+                    </td>
+                    <td style="text-align: center;">
+                      <span class="order-item-qty">1 &times;</span>
+                    </td>
+                    <td style="text-align: right;" class="type-mono">$38.00</td>
+                    <td style="text-align: right; font-weight: 600;" class="type-mono">$38.00</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="order-item-desc">
+                        <strong class="order-item-title">[Sample Dish 04] Aged Heritage Duck</strong>
+                        <span class="type-small">Notes: Medium-rare hearth roast</span>
+                      </div>
+                    </td>
+                    <td style="text-align: center;">
+                      <span class="order-item-qty">1 &times;</span>
+                    </td>
+                    <td style="text-align: right;" class="type-mono">$54.00</td>
+                    <td style="text-align: right; font-weight: 600;" class="type-mono">$54.00</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top: var(--space-md); text-align: right;">
+                <a href="menu.html" class="btn-text">
+                  <span>&larr; Return to Menu to Add More Items</span>
+                </a>
+              </div>
+            </fieldset>
+
+            <!-- Section 2: Fulfillment Mode Selection -->
+            <fieldset style="border: none; margin-bottom: var(--space-2xl);">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                2. Fulfillment Details
+              </legend>
+
+              <div class="grid-2col" style="margin-bottom: var(--space-md);">
+                <div class="payment-method-card active" tabindex="0">
+                  <div style="display: flex; justify-content: space-between;">
+                    <span class="type-meta" style="color: var(--color-brass);">MODE 01</span>
+                    <span class="badge badge-brass">SELECTED</span>
+                  </div>
+                  <strong class="type-h4">Dine-In Service</strong>
+                  <span class="type-small">Plated course delivery to your reserved table.</span>
+                </div>
+
+                <div class="payment-method-card" tabindex="0">
+                  <div style="display: flex; justify-content: space-between;">
+                    <span class="type-meta">MODE 02</span>
+                    <span class="badge badge-outline">OPTION</span>
+                  </div>
+                  <strong class="type-h4">Curated Takeaway</strong>
+                  <span class="type-small">Packaged in artisanal thermal containers for pickup.</span>
+                </div>
+              </div>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label for="table-identifier" class="form-label">Table Number (For Dine-In)</label>
+                  <input type="text" id="table-identifier" name="table_number" class="form-input" value="Table #02 (Celestial Nave)">
+                </div>
+
+                <div class="form-group">
+                  <label for="pickup-time" class="form-label">Estimated Service Time</label>
+                  <input type="text" id="pickup-time" name="pickup_time" class="form-input" value="Today at 19:15" readonly>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Section 3: Contact Information -->
+            <fieldset style="border: none; margin-bottom: var(--space-2xl);">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                3. Customer Contact
+              </legend>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label for="customer-name" class="form-label">Full Name</label>
+                  <input type="text" id="customer-name" name="customer_name" class="form-input" placeholder="Eleanor Vance" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="customer-phone" class="form-label">Mobile Phone</label>
+                  <input type="tel" id="customer-phone" name="customer_phone" class="form-input" placeholder="+1 (555) 019-2834" required>
+                  <span class="form-hint">Used for live operational status notifications.</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Section 4: Simulated Payment Checkout -->
+            <fieldset style="border: none;">
+              <legend class="type-h3" style="margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-ink-line); padding-bottom: var(--space-xs); width: 100%;">
+                4. Simulated Payment Settlement
+              </legend>
+
+              <div class="payment-methods-grid" style="margin-bottom: var(--space-md);">
+                <div class="payment-method-card active" tabindex="0">
+                  <strong class="type-small">Mock Card (Sandbox)</strong>
+                  <span class="type-micro" style="color: var(--color-brass);">Instant Settlement</span>
+                </div>
+                <div class="payment-method-card" tabindex="0">
+                  <strong class="type-small">Cash on Dine-In</strong>
+                  <span class="type-micro" style="color: var(--color-ink-muted);">Staff Verification</span>
+                </div>
+                <div class="payment-method-card" tabindex="0">
+                  <strong class="type-small">Bank Transfer</strong>
+                  <span class="type-micro" style="color: var(--color-ink-muted);">Audit Reference</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="card-holder" class="form-label">Cardholder Name (Sandbox)</label>
+                <input type="text" id="card-holder" class="form-input" value="ELEANOR VANCE (TEST ACCOUNT)" readonly>
+              </div>
+
+              <div class="grid-2col">
+                <div class="form-group">
+                  <label for="card-number" class="form-label">Card Number (Sandbox Mock)</label>
+                  <input type="text" id="card-number" class="form-input" value="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="card-exp" class="form-label">Expiry &amp; CVV</label>
+                  <input type="text" id="card-exp" class="form-input" value="12/28 &middot; CVC 999" readonly>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <!-- Right Column: Sticky Authoritative Cost Card -->
+          <aside aria-label="Cost Breakdown">
+            <div class="checkout-cost-card">
+              <span class="type-kicker">AUTHORITATIVE LEDGER</span>
+              <h2 class="type-h3" style="margin-top: var(--space-2xs); margin-bottom: var(--space-lg);">
+                Order Summary
+              </h2>
+
+              <div class="cost-row">
+                <span class="summary-label">Items Subtotal</span>
+                <span class="summary-val type-mono">$92.00</span>
+              </div>
+
+              <div class="cost-row">
+                <span class="summary-label">Fulfillment Mode</span>
+                <span class="summary-val">Dine-In (Table #02)</span>
+              </div>
+
+              <div class="cost-row">
+                <span class="summary-label">Sales Tax (0.00%)</span>
+                <span class="summary-val type-mono">$0.00</span>
+              </div>
+
+              <div class="cost-row">
+                <span class="summary-label">Service Charge (0.00%)</span>
+                <span class="summary-val type-mono">$0.00</span>
+              </div>
+
+              <div class="cost-row-total">
+                <span>Total Amount Due</span>
+                <span class="type-mono" style="color: var(--color-brass);">$92.00</span>
+              </div>
+
+              <div style="margin-top: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-sm);">
+                <button type="submit" class="btn btn-brass btn-lg" style="width: 100%;">
+                  Authorize Simulated Payment ($92.00)
+                </button>
+                <span class="type-micro" style="color: var(--color-ink-muted); text-align: center;">
+                  Unique Idempotency Key: <code style="font-family: var(--font-mono); font-size: 0.7rem;">IDEM-8X9K2M7P</code>
+                </span>
+              </div>
+
+              <div class="border-rule" style="margin: var(--space-lg) 0;"></div>
+
+              <div style="font-size: var(--font-size-micro); color: var(--color-ink-muted); line-height: 1.5;">
+                <strong>Security Architecture:</strong> Taxes &amp; fees are disabled (0.00%) pending client policy delivery. All item totals recalculate authoritatively on the server. Submitting multiple times will not create duplicate settlements or kitchen queue tickets.
+              </div>
+            </div>
+          </aside>
+
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <span class="brand-title">LUNAR</span>
+          <span class="brand-tagline">Celestial Dining</span>
+          <p>An original dining concept uniting nocturnal gastronomy, ancestral preservation, and editorial design restraint.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu &amp; Ordering</a></li>
+            <li><a href="reservation.html" class="footer-link">Reservations</a></li>
+            <li><a href="story.html" class="footer-link">Philosophy &amp; Story</a></li>
+            <li><a href="track.html" class="footer-link">Track Order / Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Service Window</h4>
+          <ul class="footer-links" style="color: var(--color-moonstone); font-size: var(--font-size-small);">
+            <li><strong>Dinner Seating:</strong> 17:30 &ndash; 22:30</li>
+            <li><strong>Turnaround Cadence:</strong> 90 Min</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Course Milestones</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">Menu (Vanilla JS)</a></li>
+            <li><a href="menu.php" class="footer-link">Menu (Procedural PHP)</a></li>
+            <li><a href="menu-oop.php" class="footer-link">Menu (OOP PHP)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LUNAR &middot; Academic Web Programming Project (Weeks 1&ndash;6).</span>
+        <span>HTML5 &amp; CSS3 Foundation</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts: Week 3 Dynamic Cart Review & Checkout Simulation -->
+  <script type="module" src="assets/js/pages/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* ==========================================================================
+   LUNAR RESPONSIVE STYLES
+   Fluid Breakpoints: 320px, 390px, 768px, 1024px, 1440px
+   Guarantees zero horizontal overflow, comfortable typography, and accessible touch targets
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Mobile Defaults & Extra Small (320px - 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .site-header .header-inner {
+    height: 64px;
+    gap: var(--space-sm);
+  }
+
+  .brand-title {
+    font-size: 1.45rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.6rem;
+  }
+
+  .main-nav {
+    display: none; /* Mobile menu handled via drawer or accessible toggle */
+  }
+
+  .header-actions .btn-brass {
+    display: none; /* Hide duplicate reserve button in header on mobile to conserve space */
+  }
+
+  .announcement-bar {
+    font-size: 0.68rem;
+    padding: 0.35rem var(--gutter);
+  }
+
+  .announcement-bar-links {
+    display: none; /* Keep announcement text only on mobile */
+  }
+
+  .section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .section-hero {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Grid adaptations */
+  .grid-2col,
+  .grid-3col,
+  .grid-4col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .hero-meta-grid {
+    flex-direction: column !important;
+    gap: var(--space-md) !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  .status-stepper {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+
+  .status-stepper::before {
+    display: none;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .menu-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box-wrap {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .mode-toggle {
+    width: 100%;
+  }
+
+  .mode-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2xs);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet Viewports (768px - 1023px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-header .header-inner {
+    height: 70px;
+    gap: var(--space-md);
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    gap: var(--space-md);
+  }
+
+  .nav-link {
+    font-size: var(--font-size-micro);
+  }
+
+  .header-actions .btn-brass {
+    padding: 0.45rem 0.85rem;
+    font-size: var(--font-size-micro);
+  }
+
+  .grid-3col,
+  .grid-4col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop Standard & Large (1024px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .grid-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Editorial Asymmetric Splits */
+  .grid-split-7-5 {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .grid-split-5-7 {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Ultrawide Display Guard (1440px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+}

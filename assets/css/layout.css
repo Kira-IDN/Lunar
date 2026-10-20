@@ -1,0 +1,304 @@
+/* ==========================================================================
+   LUNAR LAYOUT STYLES
+   Editorial grid, architectural containers, navigation masthead & colophon
+   ========================================================================== */
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.container-editorial {
+  width: 100%;
+  max-width: var(--container-editorial-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Sections */
+.section {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.section-hero {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.section-bordered {
+  border-bottom: var(--border-line);
+}
+
+.section-faint {
+  background-color: var(--color-paper-muted);
+}
+
+.section-dark {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.section-dark .type-lead {
+  color: var(--color-moonstone);
+}
+
+.section-dark .type-meta {
+  color: var(--color-moonstone);
+}
+
+.section-dark .border-rule {
+  border-color: rgba(243, 240, 232, 0.12);
+}
+
+/* Section Header (Editorial Centered or Left-Aligned) */
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header-centered {
+  text-align: center;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header .type-kicker {
+  margin-bottom: var(--space-xs);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-sm);
+}
+
+/* Editorial Rules & Dividers */
+.border-rule {
+  border: none;
+  border-top: var(--border-line);
+  margin: var(--space-2xl) 0;
+}
+
+.border-brass {
+  border: none;
+  border-top: 1px solid var(--color-brass-border);
+  margin: var(--space-xl) 0;
+}
+
+/* Top Operational Announcement Bar */
+.announcement-bar {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.45rem var(--gutter);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  letter-spacing: var(--letter-spacing-wide);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.announcement-bar-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.announcement-bar-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.announcement-bar a:hover {
+  color: var(--color-brass);
+}
+
+/* Primary Navigation Masthead */
+.site-header {
+  background-color: var(--color-paper);
+  border-bottom: var(--border-line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(243, 240, 232, 0.94);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+/* Brand Identity */
+.brand-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: var(--letter-spacing-ultrawide);
+  text-transform: uppercase;
+  color: var(--color-brass);
+  line-height: 1;
+}
+
+/* Desktop Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-brass);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-brass);
+}
+
+/* Header Utilities */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-ink-line);
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--color-ink);
+}
+
+/* Footer Colophon */
+.site-footer {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.25fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.footer-col-brand .brand-title {
+  color: var(--color-paper);
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.footer-col-brand p {
+  color: var(--color-moonstone);
+  font-size: var(--font-size-small);
+  line-height: 1.6;
+  max-width: 320px;
+  margin-top: var(--space-sm);
+}
+
+.footer-heading {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-ultrawide);
+  color: var(--color-brass);
+  margin-bottom: var(--space-md);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-link {
+  font-size: var(--font-size-small);
+  color: var(--color-moonstone);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-paper);
+}
+
+.footer-bottom {
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  color: var(--color-moonstone);
+}
+
+.footer-bottom a {
+  color: var(--color-moonstone);
+}
+
+.footer-bottom a:hover {
+  color: var(--color-brass);
+}

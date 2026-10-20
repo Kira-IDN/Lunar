@@ -1,0 +1,301 @@
+[
+  {
+    "id": "dish-01",
+    "category_id": "appetizers",
+    "name": "Seared Diver Scallops",
+    "description": "Cold-water scallops, fermented white asparagus jus, sea kelp infusion, and smoked marrow emulsion.",
+    "price": 38.0,
+    "image_url": "https://images.unsplash.com/photo-1612204078213-a227dba74093?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "GF",
+      "SIGNATURE"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 01 · Light to Saline"
+  },
+  {
+    "id": "dish-02",
+    "category_id": "appetizers",
+    "name": "Burrata & Charred Fig",
+    "description": "Cultured milk burrata, wood-charred black mission figs, wild pine needle honey, and toasted buckwheat tuile.",
+    "price": 26.0,
+    "image_url": "https://plus.unsplash.com/premium_photo-1664206963984-9e97fca83372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "V",
+      "NF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 01 · Light to Saline"
+  },
+  {
+    "id": "dish-03",
+    "category_id": "appetizers",
+    "name": "Forest Mushroom Tartare",
+    "description": "Foraged chanterelles, cured egg yolk purée, pickled mustard seeds, and sourdough crisp.",
+    "price": 24.0,
+    "image_url": "https://images.unsplash.com/photo-1733673565604-85c1266eee1e?q=80&w=1652&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "VG",
+      "86'D"
+    ],
+    "is_available": false,
+    "is_featured": false,
+    "prep_stage": "Stage 01 · Light to Saline"
+  },
+  {
+    "id": "dish-04",
+    "category_id": "mains",
+    "name": "Aged Heritage Duck",
+    "description": "14-day dry-aged duck breast, charred nightshade purée, fermented black plum reduction, and braised chicory.",
+    "price": 54.0,
+    "image_url": "https://images.unsplash.com/photo-1710587384781-cb74c778b076?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "DF",
+      "CHEF PICK"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 02 · Savory & Smoke"
+  },
+  {
+    "id": "dish-05",
+    "category_id": "mains",
+    "name": "Smoked Black Cod",
+    "description": "Sablefish cured in fermented sake lees, charred leek dashi, pickled sea radish, and sesame leaf oil.",
+    "price": 48.0,
+    "image_url": "https://images.unsplash.com/photo-1654772704042-0d536b77548b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "GF",
+      "DF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 02 · Savory & Smoke"
+  },
+  {
+    "id": "dish-06",
+    "category_id": "mains",
+    "name": "Roasted Heritage Beets",
+    "description": "Salt-baked golden and red beets, cultured cashew labneh, blackcurrant vinaigrette, and smoked hazelnut dukkah.",
+    "price": 34.0,
+    "image_url": "https://images.unsplash.com/photo-1767065703762-cfb5aef34d69?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "VG",
+      "GF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 02 · Savory & Smoke"
+  },
+  {
+    "id": "dish-07",
+    "category_id": "desserts",
+    "name": "Nocturne Ganache",
+    "description": "72% single-origin cacao, smoked birch syrup, cultured sheep milk gelato, and black salt crystal tuile.",
+    "price": 22.0,
+    "image_url": "https://images.unsplash.com/photo-1565071559227-20ab25b7685e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "V",
+      "SIGNATURE"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 03 · Bitter & Sweet"
+  },
+  {
+    "id": "dish-08",
+    "category_id": "desserts",
+    "name": "Crème Brûlée",
+    "description": "Silky vanilla bean custard beneath a delicate crackling caramelized sugar crust.",
+    "price": 18.0,
+    "image_url": "https://images.unsplash.com/photo-1676300184943-09b2a08319a3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "VG",
+      "GF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 03 · Bitter & Sweet"
+  },
+  {
+    "id": "dish-09",
+    "category_id": "beverages",
+    "name": "Celestial Birch Cold Brew",
+    "description": "Fermented birch water infused with toasted yaupon holly, charred juniper berries, and wild wintergreen.",
+    "price": 14.0,
+    "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "VG",
+      "ZERO-PROOF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 04 · Botanical & Mineral Infusions"
+  },
+  {
+    "id": "dish-10",
+    "category_id": "beverages",
+    "name": "Smoked Pine Needle Tisane",
+    "description": "Foraged white pine needles gently smoked over birch coals, infused with mountain honey and dried chamomile blossom.",
+    "price": 12.0,
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "VG",
+      "GF",
+      "HOT TISANE"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 04 · Botanical & Mineral Infusions"
+  },
+  {
+    "id": "dish-11",
+    "category_id": "appetizers",
+    "name": "Burrata, Tomato & Basil",
+    "description": "Creamy burrata with ripe tomatoes, basil leaves, extra-virgin olive oil, and toasted sourdough.",
+    "price": 22.0,
+    "image_url": "https://plus.unsplash.com/premium_photo-1693077054280-f76e22eb8f5f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "V",
+      "CHEF PICK"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 01 · Light to Saline"
+  },
+  {
+    "id": "dish-12",
+    "category_id": "appetizers",
+    "name": "Citrus Garden Salad",
+    "description": "Seasonal greens, orange segments, shaved fennel, toasted seeds, and a bright citrus vinaigrette.",
+    "price": 18.0,
+    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "VG",
+      "GF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 01 · Light to Saline"
+  },
+  {
+    "id": "dish-13",
+    "category_id": "mains",
+    "name": "Rosemary Hearth Steak",
+    "description": "Grilled steak with rosemary jus, roasted seasonal vegetables, and crisp golden potatoes.",
+    "price": 46.0,
+    "image_url": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "GF",
+      "CHEF PICK"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 02 · Savory & Smoke"
+  },
+  {
+    "id": "dish-14",
+    "category_id": "mains",
+    "name": "Wild Mushroom Tagliatelle",
+    "description": "Silky ribbons of pasta with sautéed wild mushrooms, parmesan, thyme, and a light cream sauce.",
+    "price": 32.0,
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "V"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 02 · Savory & Smoke"
+  },
+  {
+    "id": "dish-15",
+    "category_id": "desserts",
+    "name": "Vanilla Panna Cotta",
+    "description": "Silky vanilla bean panna cotta with seasonal berry compote and delicate almond crumble.",
+    "price": 36.0,
+    "image_url": "https://plus.unsplash.com/premium_photo-1713913281148-1098c675ff3a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "GF",
+      "DF"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 03 · Bitter & Sweet"
+  },
+  {
+    "id": "dish-16",
+    "category_id": "desserts",
+    "name": "Midnight Chocolate Mousse",
+    "description": "Rich chocolate mousse layered with silky chocolate cream, topped with chocolate shavings and a delicate dusting of cocoa.",
+    "price": 16.0,
+    "image_url": "https://plus.unsplash.com/premium_photo-1695750678153-e7148811673e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "V",
+      "SIGNATURE"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 03 · Bitter & Sweet"
+  },
+  {
+    "id": "dish-17",
+    "category_id": "desserts",
+    "name": "Vanilla Bean Cheesecake",
+    "description": "Baked vanilla cheesecake with berry compote and a buttery biscuit base.",
+    "price": 17.0,
+    "image_url": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "V"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 03 · Bitter & Sweet"
+  },
+  {
+    "id": "dish-18",
+    "category_id": "beverages",
+    "name": "Citrus Rosemary Spritz",
+    "description": "A sparkling zero-proof blend of citrus, rosemary syrup, and chilled soda water.",
+    "price": 12.0,
+    "image_url": "https://images.unsplash.com/photo-1697479815895-23ea2934711a?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "VG",
+      "ZERO-PROOF"
+    ],
+    "is_available": true,
+    "is_featured": true,
+    "prep_stage": "Stage 04 · Botanical & Mineral Infusions"
+  },
+  {
+    "id": "dish-19",
+    "category_id": "beverages",
+    "name": "Peach Hibiscus Iced Tea",
+    "description": "Chilled hibiscus tea with ripe peach, lemon, and a refreshing floral finish.",
+    "price": 9.0,
+    "image_url": "https://images.unsplash.com/photo-1753427882612-ba4e3c98c7ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "dietary_tags": [
+      "VG",
+      "GF",
+      "ICED"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 04 · Botanical & Mineral Infusions"
+  },
+  {
+    "id": "dish-20",
+    "category_id": "beverages",
+    "name": "Velvet Matcha Latte",
+    "description": "Smooth matcha whisked with steamed milk and a gentle layer of foam.",
+    "price": 10.0,
+    "image_url": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80",
+    "dietary_tags": [
+      "V"
+    ],
+    "is_available": true,
+    "is_featured": false,
+    "prep_stage": "Stage 04 · Botanical & Mineral Infusions"
+  }
+]

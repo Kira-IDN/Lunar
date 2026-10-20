@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "slug": "all",
+    "name": "All Offerings",
+    "description": "Complete seasonal progression",
+    "display_order": 0
+  },
+  {
+    "id": "appetizers",
+    "slug": "appetizers",
+    "name": "Appetizers & Cold Botanicals",
+    "description": "Stage 01 · Light to Saline",
+    "display_order": 1
+  },
+  {
+    "id": "mains",
+    "slug": "mains",
+    "name": "Mains & The Wood Hearth",
+    "description": "Stage 02 · Savory & Smoke",
+    "display_order": 2
+  },
+  {
+    "id": "desserts",
+    "slug": "desserts",
+    "name": "Desserts & Lunar Confections",
+    "description": "Stage 03 · Bitter & Sweet",
+    "display_order": 3
+  },
+  {
+    "id": "beverages",
+    "slug": "beverages",
+    "name": "Nocturne Elixirs & Teas",
+    "description": "Stage 04 · Botanical & Mineral Infusions",
+    "display_order": 4
+  }
+]

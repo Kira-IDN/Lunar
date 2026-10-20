@@ -1,0 +1,128 @@
+/* ==========================================================================
+   LUNAR CHECKOUT PAGE STYLES (checkout.css)
+   Order review, fulfillment toggle, simulated payment forms, and cost ledger
+   ========================================================================== */
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+/* Itemized Order Table */
+.order-review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+}
+
+.order-review-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-ink-line);
+}
+
+.order-review-table td {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-ink-faint);
+  vertical-align: middle;
+}
+
+.order-item-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-item-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-ink);
+}
+
+.order-item-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-small);
+}
+
+/* Payment Method Selection */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.payment-method-card {
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  transition: all var(--transition-fast);
+}
+
+.payment-method-card:hover {
+  border-color: var(--color-brass);
+}
+
+.payment-method-card.active {
+  border-color: var(--color-brass);
+  background-color: #FDFBF7;
+  box-shadow: 0 0 0 1px var(--color-brass);
+}
+
+/* Authoritative Cost Card */
+.checkout-cost-card {
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xs);
+  position: sticky;
+  top: 100px;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-xs) 0;
+  font-size: var(--font-size-small);
+}
+
+.cost-row-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+  border-top: 2px solid var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-ink);
+}
+
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .checkout-cost-card {
+    position: static;
+  }
+}

@@ -1,0 +1,184 @@
+/* ==========================================================================
+   LUNAR MENU PAGE STYLES (menu.css)
+   Catalog layout, category filters, search bar, and dish display
+   ========================================================================== */
+
+/* Menu Masthead */
+.menu-hero {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: var(--border-line);
+}
+
+@media (max-width: 480px) {
+  .menu-hero h1 {
+    font-size: 1.65rem !important;
+    line-height: 1.25;
+  }
+}
+
+.menu-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Category Filter Bar */
+.category-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: var(--space-xs);
+  scrollbar-width: none; /* Hide scrollbar for clean editorial look */
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill {
+  min-height: 42px;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-ink-line);
+  background-color: transparent;
+  color: var(--color-ink);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--color-ink);
+  background-color: rgba(23, 27, 36, 0.04);
+}
+
+.filter-pill.active {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Menu Search & Fulfillment Bar */
+.menu-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.search-box-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+}
+
+.search-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  border: 1px solid var(--color-ink-line);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-paper-card);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-small);
+  color: var(--color-ink);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-ink-muted);
+  pointer-events: none;
+}
+
+/* Fulfillment Mode Switcher */
+.mode-toggle {
+  display: inline-flex;
+  padding: 3px;
+  background-color: var(--color-paper-muted);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-ink-line);
+}
+
+.mode-btn {
+  min-height: 38px;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  color: var(--color-ink-muted);
+  transition: all var(--transition-fast);
+}
+
+.mode-btn.active {
+  background-color: var(--color-paper-card);
+  color: var(--color-ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Category Sections */
+.menu-category-section {
+  margin-bottom: var(--space-4xl);
+}
+
+.category-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-ink);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.category-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2);
+  color: var(--color-ink);
+}
+
+.category-meta {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  color: var(--color-brass);
+  letter-spacing: var(--letter-spacing-ultrawide);
+  text-transform: uppercase;
+}
+
+/* Out of Stock / 86'd state style */
+.dish-card.unavailable {
+  opacity: 0.65;
+  filter: grayscale(40%);
+}
+
+.dish-card.unavailable .dish-image-wrap::after {
+  content: "OUT OF STOCK [86]";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(23, 27, 36, 0.6);
+  color: var(--color-paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-ultrawide);
+}

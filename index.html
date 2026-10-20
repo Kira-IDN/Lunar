@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUNAR — Celestial Dining Experience. An editorial restaurant and integrated ordering platform rooted in seasonal rhythm and culinary restraint.">
+  <title>LUNAR — Celestial Dining Experience</title>
+
+  <!-- Google Fonts: Cormorant Garamond, DM Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+
+  <!-- Top Operational Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="announcement-bar-content">
+      <span class="lunar-glyph" aria-hidden="true">○</span>
+      <span>[SAMPLE NOTICE] Current Cycle: Equinox Autumn Tasting Menu &middot; Service Hours: 17:30 &ndash; 22:30</span>
+    </div>
+    <div class="announcement-bar-links">
+      <span class="type-coordinates">40&deg; 42&prime; 46&Prime; N &middot; 74&deg; 00&prime; 21&Prime; W</span>
+      <a href="track.html" class="type-meta">Track Order</a>
+    </div>
+  </aside>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="LUNAR Homepage">
+        <span class="brand-title">LUNAR</span>
+        <span class="brand-tagline">Celestial Dining</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="reservation.html" class="nav-link">Reservations</a>
+        <a href="track.html" class="nav-link">Order Lookup</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="checkout.html" class="btn btn-outline btn-sm" aria-label="View Cart">
+          <span>Cart</span>
+          <span class="badge badge-brass" aria-label="0 items">0</span>
+        </a>
+        <a href="reservation.html" class="btn btn-brass btn-sm">Reserve Table</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section (Editorial Asymmetric Composition) -->
+    <section class="section section-hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-text-block">
+            <span class="type-kicker">[SEASONAL SERVICE &middot; CYCLE VI]</span>
+            <h1 id="hero-heading" class="type-display">Culinary Artistry Beneath the Celestial Arc.</h1>
+            <p class="type-lead">
+              LUNAR explores the quiet convergence of nocturnal terroir, ancestral fermentation, and hyper-seasonal ingredients. An editorial tasting experience where cuisine mirrors the lunar phase.
+            </p>
+            <div class="hero-actions">
+              <a href="menu.html" class="btn btn-brass btn-lg">Explore Menu</a>
+              <a href="reservation.html" class="btn btn-outline btn-lg">Reserve a Table</a>
+            </div>
+            <div class="border-brass" style="margin-top: var(--space-xl); margin-bottom: 0;"></div>
+            <div class="hero-meta-grid" style="display: flex; gap: var(--space-xl); padding-top: var(--space-sm);">
+              <div>
+                <span class="type-meta" style="display: block;">DINING FORMAT</span>
+                <span class="type-small">Dine-In Tasting &amp; Curated Takeaway</span>
+              </div>
+              <div>
+                <span class="type-meta" style="display: block;">TABLE TURNOVER</span>
+                <span class="type-small">[Configurable Default: 90 Min Seating]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-frame">
+            <div class="hero-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" 
+                alt="Plated fine dining culinary dish with roasted botanicals and dark ceramic dishware" 
+                width="800" 
+                height="1000"
+                loading="eager"
+              >
+            </div>
+            <div class="hero-image-caption">
+              <span>PLATE REF: [SAMPLE TASTING &middot; AUTUMN EQUINOX]</span>
+              <span class="type-coordinates">FIG. 01 &middot; CELESTIAL DISH</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Philosophy Section -->
+    <section class="section section-bordered section-faint" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div class="story-grid">
+          <div>
+            <span class="type-kicker">CULINARY PHILOSOPHY</span>
+            <h2 id="philosophy-heading" class="type-h2" style="margin-top: var(--space-xs); margin-bottom: var(--space-md);">
+              Restraint, Terroir, and Temporal Precision.
+            </h2>
+            <blockquote class="story-quote">
+              &ldquo;We do not invent flavors. We listen to the nocturnal cycles of the tides and earth, serving what is ripe at the exact hour of its peak.&rdquo;
+            </blockquote>
+            <p class="type-body" style="color: var(--color-ink-muted); margin-bottom: var(--space-md);">
+              Every menu iteration at LUNAR is treated like an editorial volume. Ingredients are harvested under optimal solar and lunar alignments, allowing umami, delicate acidities, and wild botanicals to take precedence over culinary spectacle.
+            </p>
+            <a href="story.html" class="btn-text">
+              <span>Read the Full Culinary Journal</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div>
+            <div class="hero-image-wrap" style="aspect-ratio: 16 / 11;">
+              <img 
+                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80" 
+                alt="Chef assembling a delicate culinary dish with precision tweezers in an ambient kitchen" 
+                width="800" 
+                height="550"
+                loading="lazy"
+              >
+            </div>
+            <div class="hero-image-caption">
+              <span>THE HEARTH &middot; INGREDIENT FOCUS</span>
+              <span class="type-coordinates">OBSERVATORY KITCHEN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Menu Highlights Section -->
+    <section class="section section-bordered" aria-labelledby="highlights-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="type-kicker">[CURATED PROFILES &middot; SAMPLE MENU]</span>
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--space-md);">
+            <div>
+              <h2 id="highlights-heading" class="type-h2">Selected Dishes for the Current Lunar Phase.</h2>
+              <p class="type-lead" style="max-width: 600px;">
+                Clearly labeled culinary compositions. Official recipes and final pricing will be provided upon client menu delivery.
+              </p>
+            </div>
+            <a href="menu.html" class="btn btn-outline">View Complete Menu</a>
+          </div>
+        </div>
+
+        <div class="grid-3col" id="featured-dishes-grid">
+          
+          <!-- Dish 01 -->
+          <article class="dish-card" aria-label="Seared Diver Scallops">
+            <div class="dish-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80" 
+                alt="Seared diver scallops served with celestial sea broth and sea herbs" 
+                width="600" 
+                height="450"
+                loading="lazy"
+              >
+              <div class="dish-card-badges">
+                <span class="badge badge-moonstone">GF</span>
+                <span class="badge badge-brass">FEATURED</span>
+              </div>
+            </div>
+            <div class="dish-content">
+              <div class="dish-header">
+                <h3 class="dish-title">[Sample Dish 01] Seared Diver Scallops</h3>
+                <span class="type-price">$38.00</span>
+              </div>
+              <p class="dish-description">
+                Cold-water scallops, fermented white asparagus jus, sea kelp infusion, and smoked bone marrow emulsion.
+              </p>
+              <div class="dish-footer">
+                <span class="type-meta">[APPETIZER]</span>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="dish-01">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 02 -->
+          <article class="dish-card" aria-label="Slow-Roasted Heritage Duck Breast">
+            <div class="dish-image-wrap">
+              <img 
+                src="https://unsplash.com/id/foto/daging-panggang-dengan-sayuran-di-atas-nampan-bundar-kayu-coklat-TK5VlaGqkZc" 
+                alt="Glazed duck breast with blackened plum reduction and wild charred leek" 
+                width="600" 
+                height="450"
+                loading="lazy"
+              >
+              <div class="dish-card-badges">
+                <span class="badge badge-moonstone">DF</span>
+                <span class="badge badge-brass">SIGNATURE</span>
+              </div>
+            </div>
+            <div class="dish-content">
+              <div class="dish-header">
+                <h3 class="dish-title">[Sample Dish 04] Aged Heritage Duck</h3>
+                <span class="type-price">$54.00</span>
+              </div>
+              <p class="dish-description">
+                14-day dry-aged duck breast, charred nightshade pur&eacute;e, fermented black plum reduction, and chicory.
+              </p>
+              <div class="dish-footer">
+                <span class="type-meta">[MAIN COURSE]</span>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="dish-04">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 03 -->
+          <article class="dish-card" aria-label="Nocturne Smoked Dark Chocolate">
+            <div class="dish-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80" 
+                alt="Dark chocolate ganache with salted rye crisp and moonstone cream" 
+                width="600" 
+                height="450"
+                loading="lazy"
+              >
+              <div class="dish-card-badges">
+                <span class="badge badge-moonstone">V</span>
+              </div>
+            </div>
+            <div class="dish-content">
+              <div class="dish-header">
+                <h3 class="dish-title">[Sample Dish 07] Nocturne Ganache</h3>
+                <span class="type-price">$22.00</span>
+              </div>
+              <p class="dish-description">
+                72% single-origin cacao, smoked birch syrup, cultured sheep milk gelato, and black salt crystal tuile.
+              </p>
+              <div class="dish-footer">
+                <span class="type-meta">[DESSERT]</span>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="dish-07">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining Room Atmosphere & Seating Section -->
+    <section class="section section-bordered" aria-labelledby="atmosphere-heading">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="type-kicker">ATMOSPHERE &amp; SPACES</span>
+          <h2 id="atmosphere-heading" class="type-h2">Architectural Sanctums for Unhurried Evenings.</h2>
+          <p class="type-lead">
+            Every table is situated with deliberate acoustic separation, warm low-angle lighting, and sightlines to the night sky.
+          </p>
+        </div>
+
+        <div class="grid-2col">
+          
+          <div class="atmosphere-card">
+            <div class="atmosphere-image">
+              <img 
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" 
+                alt="Atmospheric dining room with minimalist wood tables and warm candlelight" 
+                width="700" 
+                height="437"
+                loading="lazy"
+              >
+            </div>
+            <div class="atmosphere-content">
+              <span class="type-kicker">THE CELESTIAL NAVE</span>
+              <h3 class="type-h3">Main Dining Sanctuary</h3>
+              <p class="type-body" style="color: var(--color-ink-muted); margin-bottom: var(--space-md);">
+                An expansive yet intimate chamber featuring paper-textured walls, darkened walnut millwork, and custom acoustic dampening for focused dining conversations.
+              </p>
+              <span class="type-meta">CAPACITY: 2 TO 6 GUESTS &middot; RESERVATION REQUIRED</span>
+            </div>
+          </div>
+
+          <div class="atmosphere-card">
+            <div class="atmosphere-image">
+              <img 
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" 
+                alt="Private chef counter seating with minimalist stools and ambient lighting" 
+                width="700" 
+                height="437"
+                loading="lazy"
+              >
+            </div>
+            <div class="atmosphere-content">
+              <span class="type-kicker">THE OBSERVATORY</span>
+              <h3 class="type-h3">Chef&rsquo;s Counter &amp; Hearth</h3>
+              <p class="type-body" style="color: var(--color-ink-muted); margin-bottom: var(--space-md);">
+                Front-row seating overlooking the live wood hearth and plating line. Witness the choreography of each course prepared directly by the culinary team.
+              </p>
+              <span class="type-meta">CAPACITY: 8 SEATS &middot; 7-COURSE TASTING ONLY</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Call to Action (Dark Editorial Section) -->
+    <section class="section section-dark" aria-labelledby="cta-heading">
+      <div class="container text-center" style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="type-kicker" style="color: var(--color-brass);">TABLE RESERVATIONS</span>
+        <h2 id="cta-heading" class="type-display" style="color: var(--color-paper); margin-top: var(--space-xs); margin-bottom: var(--space-md);">
+          Secure Your Table for the Upcoming Moon Phase.
+        </h2>
+        <p class="type-lead" style="margin-bottom: var(--space-xl);">
+          Seatings are offered on a 90-minute cadence to preserve culinary pacing. Real-time slot availability prevents double-booking across all dining zones.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+          <a href="reservation.html" class="btn btn-brass btn-lg">Book a Table Online</a>
+          <a href="menu.html" class="btn btn-outline btn-lg" style="color: var(--color-paper); border-color: rgba(255, 255, 255, 0.2);">Explore Takeaway Ordering</a>
+        </div>
+        <p class="type-small" style="color: var(--color-moonstone); margin-top: var(--space-lg);">
+          [NOTE: Cancellation window is currently set to 2 hours prior to seating. All dining policies remain subject to final client confirmation.]
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (Colophon) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col-brand">
+          <span class="brand-title">LUNAR</span>
+          <span class="brand-tagline">Celestial Dining</span>
+          <p>
+            An original dining concept uniting nocturnal gastronomy, ancestral preservation, and editorial design restraint.
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <span class="type-coordinates">LAT 40&deg; 42&prime; 46&Prime; N &middot; LONG 74&deg; 00&prime; 21&Prime; W</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Architecture</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu &amp; Ordering</a></li>
+            <li><a href="reservation.html" class="footer-link">Reservations</a></li>
+            <li><a href="story.html" class="footer-link">Philosophy &amp; Story</a></li>
+            <li><a href="track.html" class="footer-link">Track Order / Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Hours</h4>
+          <ul class="footer-links" style="color: var(--color-moonstone); font-size: var(--font-size-small);">
+            <li><strong>Tuesday &ndash; Thursday:</strong> 17:30 &ndash; 22:30</li>
+            <li><strong>Friday &ndash; Saturday:</strong> 17:00 &ndash; 23:30</li>
+            <li><strong>Sunday &ndash; Monday:</strong> Closed for Foraging</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Course Milestones</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">Menu (Vanilla JS)</a></li>
+            <li><a href="menu.php" class="footer-link">Menu (Procedural PHP)</a></li>
+            <li><a href="menu-oop.php" class="footer-link">Menu (OOP PHP)</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 LUNAR &middot; Academic Web Programming Project (Weeks 1&ndash;6).</span>
+        <span>Designed with HTML5, CSS3, and Editorial Restraint.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts: Week 3 Global Cart State & Drawer -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

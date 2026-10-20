@@ -1,0 +1,74 @@
+/* ==========================================================================
+   LUNAR TRACKING PAGE STYLES (track.css)
+   Order & reservation progress pipelines, receipt cards, and adaptive poll indicator
+   ========================================================================== */
+
+.track-header-box {
+  background-color: var(--color-paper-card);
+  border: 1px solid var(--color-ink-line);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+.track-lookup-form {
+  display: flex;
+  gap: var(--space-sm);
+  max-width: 600px;
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.track-lookup-input {
+  flex: 1;
+  min-width: 240px;
+  min-height: 46px;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-ink-line);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Decoupled Status Banner */
+.status-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  background-color: var(--color-paper-muted);
+  border: 1px solid var(--color-ink-line);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+.status-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pipeline-card {
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (max-width: 767px) {
+  .status-banner {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .track-lookup-form {
+    flex-direction: column;
+  }
+
+  .track-lookup-form .btn {
+    width: 100%;
+  }
+}

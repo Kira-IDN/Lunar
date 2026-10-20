@@ -1,0 +1,128 @@
+/* ==========================================================================
+   LUNAR RESERVATION PAGE STYLES (reservation.css)
+   Date/Time slot grid, Table selection cards, and Booking summary
+   ========================================================================== */
+
+.reservation-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+/* Time Slot Selector Grid */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.slot-btn {
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-ink);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.slot-btn:hover {
+  border-color: var(--color-brass);
+}
+
+.slot-btn.active {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.slot-btn.unavailable {
+  opacity: 0.4;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  background-color: var(--color-paper-muted);
+}
+
+/* Table Selector Cards */
+.table-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.table-card-option {
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.table-card-option:hover {
+  border-color: var(--color-brass);
+}
+
+.table-card-option.active {
+  border-color: var(--color-brass);
+  background-color: #FDFBF7;
+  box-shadow: 0 0 0 1px var(--color-brass);
+}
+
+/* Booking Summary Card */
+.booking-summary-card {
+  border: 1px solid var(--color-ink-line);
+  background-color: var(--color-paper-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xs);
+  position: sticky;
+  top: 100px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-ink-faint);
+  font-size: var(--font-size-small);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-ink-muted);
+}
+
+.summary-val {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-ink);
+}
+
+@media (max-width: 900px) {
+  .reservation-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .booking-summary-card {
+    position: static;
+  }
+}
